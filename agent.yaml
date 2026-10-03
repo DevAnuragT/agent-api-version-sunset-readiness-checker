@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: api-version-sunset-readiness-checker
+version: 0.1.0
+description: Review API retirement plans for migration evidence and consumer communication.
+skills:
+  - api-version-sunset-readiness-checker-skill
+tools:
+  - review-api-version-sunset-readiness-checker
+tags:
+  - developer-tools
+  - evidence-driven

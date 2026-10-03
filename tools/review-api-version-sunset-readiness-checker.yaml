@@ -1,0 +1,54 @@
+{
+  "name": "review-api-version-sunset-readiness-checker",
+  "description": "Run API Version Sunset Readiness Checker",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "sunset_date": {
+            "type": "string",
+            "description": "sunset date"
+          },
+          "migration_guide": {
+            "type": "string",
+            "description": "migration guide"
+          },
+          "consumer_notice": {
+            "type": "string",
+            "description": "consumer notice"
+          }
+        },
+        "required": [
+          "sunset_date",
+          "migration_guide",
+          "consumer_notice"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-api-version-sunset-readiness-checker.py",
+    "runtime": "python3"
+  }
+}

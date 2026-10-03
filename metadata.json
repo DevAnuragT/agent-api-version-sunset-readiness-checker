@@ -1,0 +1,24 @@
+{
+  "slug": "api-version-sunset-readiness-checker",
+  "title": "API Version Sunset Readiness Checker",
+  "category": "developer-tools",
+  "description": "Review API retirement plans for migration evidence and consumer communication.",
+  "fields": {
+    "sunset_date": {
+      "label": "sunset date",
+      "kind": "date",
+      "minimum": 0
+    },
+    "migration_guide": {
+      "label": "migration guide",
+      "kind": "text",
+      "minimum": 80
+    },
+    "consumer_notice": {
+      "label": "consumer notice",
+      "kind": "required",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}
